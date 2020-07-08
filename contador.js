@@ -9,6 +9,8 @@ var segundosFaltantes;
 var contando;
 var horaCero = "00:00:00";
 var estado = true;
+var estadoInputHora = true;
+
 function iniciador() {
     document.getElementById("iconEmision").src=iconOnAir;
     document.getElementById("estadoTxt").innerHTML=onAirText;
@@ -53,6 +55,7 @@ function iniciarConteo() {
     contando = setTimeout(iniciarConteo,1000);
     document.getElementById("play").disabled=true;
     document.getElementById("stop").disabled=false;
+    document.getElementById("tiempo").disabled=true;
     if(horasFaltantes==0 && minutosFaltantes==0 && segundosFaltantes==0 ){
         detenerConteo();
     }
@@ -62,6 +65,7 @@ function detenerConteo() {
     tiempo = 0;
     document.getElementById("contador").innerHTML=horaCero;
     document.getElementById("play").disabled=false;
+    document.getElementById("tiempo").disabled=false;
 }
 
 function ocultar(){
