@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+    <link rel="stylesheet" href="contador.css">
+    <title>Contador | OT</title>
+</head>
+<body onload="iniciador()"> 
+    <div class="titulo">
+        <h1>Open Tech</h1>
+    </div>
+    <div class="contenedorContador">
+        <div class="contador" id="contador"></div>
+    </div>
+    <div class="contenedorEstado" id="contenedorEstado">
+        <div class="btnLink" id="btnLink" onclick="ocultar()"> 
+            <div><img id="iconEmision"></div>
+            <div class="estadoTxt"  id="estadoTxt"></div>
+        </div>
+    </div>
+    <div class="inputs" id="inputs">
+        <input type="time" id="tiempo">
+        <button class="botonManip" id="play" onclick="iniciarConteo()"><img src="iconos/play.png" alt="play"></button>
+        <button class="botonManip" id="stop" onclick="detenerConteo()"><img src="iconos/stop.png" alt="detener"></button>
+        <p id="msjError"></p>
+    </div>
+    <script src="contador.js"></script>
+</body>
+</html>

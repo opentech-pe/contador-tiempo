@@ -1,0 +1,64 @@
+html, body{
+    background-color: #F6F6F6;
+
+}
+.titulo{
+    margin-top: 150px;
+}
+h1{
+    font-family: 'Press Start 2P';
+    color: #229BEF;
+    text-shadow: 10px 8px black;
+    text-align: center;
+    font-size: 70px;
+}
+.contenedorEstado{
+    display: flex;
+    justify-content: center;
+}
+.btnLink{
+    background-color: #229BEF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    border: 3px dashed #ABADA8;
+}
+.estadoTxt{
+    color: #F6F6F6;
+    font-family: 'Press Start 2P';
+    margin-left: 5px;
+    font-size: smaller;
+}
+.contenedorContador{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+.contador{
+    font-family: 'Press Start 2P';
+    color: black;
+    text-shadow: 5px 5px #229BEF;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 10px ridge;
+}
+.inputs{
+    text-align: center;
+    margin-top: 25px;
+}
+.botonManip{
+    background-color: #229BEF;
+    border: outset;
+}
+.btnLink{
+    cursor: pointer;
+}
