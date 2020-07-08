@@ -13,18 +13,18 @@
         <h1>Open Tech</h1>
     </div>
     <div class="contenedorContador">
-        <div class="contador" id="contador"></div>
+        <div class="contador" id="contador" ></div>
     </div>
     <div class="contenedorEstado" id="contenedorEstado">
-        <div class="btnLink" id="btnLink" onclick="ocultar()"> 
+        <div class="btnLink" id="btnLink" onclick="ocultar()" title="ocultar/mostrar botones"> 
             <div><img id="iconEmision"></div>
             <div class="estadoTxt"  id="estadoTxt"></div>
         </div>
     </div>
     <div class="inputs" id="inputs">
-        <input type="time" id="tiempo">
-        <button class="botonManip" id="play" onclick="iniciarConteo()"><img src="iconos/play.png" alt="play"></button>
-        <button class="botonManip" id="stop" onclick="detenerConteo()"><img src="iconos/stop.png" alt="detener"></button>
+        <input type="time" id="tiempo" title="establecer hora final">
+        <button class="botonManip" id="play" title="iniciar conteo" onclick="iniciarConteo()"><img src="iconos/play.png" alt="play"></button>
+        <button class="botonManip" id="stop" title="detener conteo" onclick="detenerConteo()"><img src="iconos/stop.png" alt="detener"></button>
         <p id="msjError"></p>
     </div>
     <script src="contador.js"></script>
