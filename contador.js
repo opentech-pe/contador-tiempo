@@ -58,10 +58,14 @@ function iniciarConteo() {
 }
 function detenerConteo() {
     clearTimeout(contando);
+    clearTimeout(tiempoMinutero);
     tiempo = 0;
     document.getElementById("contador").innerHTML=horaCero;
     document.getElementById("play").disabled=false;
     document.getElementById("tiempo").disabled=false;
+    document.getElementById("minutero").disabled=false;
+    minutero = 0;
+    segundero = -1;
 }
 
 function ocultar(){
@@ -82,21 +86,38 @@ function ocultar(){
 function contarMinutos(){
     var hora = document.getElementById("tiempo").value;
     minutero = hora.substring(3,5);
-    alert(minutero);
     contadorDos();
 }
 
 function contadorDos(){
+    var temporal1;
+    var temporal2;
     if (segundero==-1) {
         segundero=60;
         minutero=minutero-1;
     }
-    document.getElementById("contador").innerHTML="00:"+minutero+":"+segundero;
+    if(minutero<10){
+        temporal1 = "0"+minutero;
+    }else{
+        temporal1 = minutero;
+    }
+    if(segundero<10){
+        temporal2 = "0"+segundero;
+    }else{
+        temporal2 = segundero;
+    }
+    document.getElementById("contador").innerHTML="00:"+temporal1+":"+temporal2;
     segundero=segundero-1;
     tiempoMinutero = setTimeout(contadorDos,1000);
     document.getElementById("tiempo").disabled=true;
+    document.getElementById("stop").disabled=false;
+    document.getElementById("play").disabled=true;
+    document.getElementById("minutero").disabled=true;
     if(minutero==0 && segundero==-1){
         clearTimeout(tiempoMinutero);
         document.getElementById("tiempo").disabled=false;
-    }
+        document.getElementById("play").disabled=false;
+        document.getElementById("minutero").disabled=false;
+        document.getElementById("stop").disabled=true;
+        }
 }
