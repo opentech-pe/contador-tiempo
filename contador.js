@@ -1,7 +1,3 @@
-var iconOffAir = "iconos/fueraLinea.png";
-var iconOnAir = "iconos/enLinea.png";
-var onAirText = "On Air";
-var offAirText = "Off Air";
 var tiempo;
 var horasFaltantes;
 var minutosFaltantes;
@@ -10,14 +6,14 @@ var contando;
 var horaCero = "00:00:00";
 var estado = true;
 var estadoInputHora = true;
-
+var estadoMinuto = true;
+var minutero;
+var segundero = -1;
+var tiempoMinutero;
 function iniciador() {
-    document.getElementById("iconEmision").src=iconOnAir;
-    document.getElementById("estadoTxt").innerHTML=onAirText;
     document.getElementById("stop").disabled=true;
     document.getElementById("contador").innerHTML=horaCero;
 }
-
 
 function iniciarConteo() {
     //capturar la hora final
@@ -79,5 +75,28 @@ function ocultar(){
             estado = true;
         default:
             break;
+    }
+}
+
+
+function contarMinutos(){
+    var hora = document.getElementById("tiempo").value;
+    minutero = hora.substring(3,5);
+    alert(minutero);
+    contadorDos();
+}
+
+function contadorDos(){
+    if (segundero==-1) {
+        segundero=60;
+        minutero=minutero-1;
+    }
+    document.getElementById("contador").innerHTML="00:"+minutero+":"+segundero;
+    segundero=segundero-1;
+    tiempoMinutero = setTimeout(contadorDos,1000);
+    document.getElementById("tiempo").disabled=true;
+    if(minutero==0 && segundero==-1){
+        clearTimeout(tiempoMinutero);
+        document.getElementById("tiempo").disabled=false;
     }
 }
