@@ -4,17 +4,15 @@ html, body{
 }
 .titulo{
     margin-top: 150px;
-}
-h1{
-    font-family: 'Press Start 2P';
-    color: #229BEF;
-    text-shadow: 10px 8px black;
     text-align: center;
-    font-size: 70px;
 }
 .contenedorEstado{
     display: flex;
     justify-content: center;
+    padding-top: 50px;
+}
+#cajaContador{
+    width: 30%;
 }
 .btnLink{
     background-color: #229BEF;
@@ -38,27 +36,10 @@ h1{
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 20px;
-
-}
-.contador{
-    font-family: 'Press Start 2P';
-    color: black;
-    text-shadow: 5px 5px #229BEF;
     font-size: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 10px ridge;
+    text-shadow: 8px 2px #000000;
 }
 .inputs{
     text-align: center;
     margin-top: 25px;
-}
-.botonManip{
-    background-color: #229BEF;
-    border: outset;
-}
-.btnLink{
-    cursor: pointer;
 }
